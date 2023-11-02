@@ -9,20 +9,22 @@ function resposta() {
     document.getElementById("resultado").style.border = "none";
   } else {
     var imc = peso / (alturaM * alturaM);
+
     // Limitar o valor do IMC a 2 casas decimais
     var imcArredondado = imc.toFixed(2);
 
     var resultadoText = `Seu IMC é: ${imcArredondado}. `;
 
     if (imc < 18.5) {
-      resultadoText += "Abaixo do peso ideal.";
-    } else if (imc >= 18.5 && imc < 24.9) {
-      resultadoText += "Peso saudável.";
-    } else if (imc >= 25 && imc < 29.9) {
-      resultadoText += "Sobrepeso.";
+      resultadoText = "Abaixo do peso ideal.";
+    } else if (imc < 24.9) {
+      resultadoText = "Seu IMC: " + imcArredondado + " Peso saudável.";
+    } else if (imc < 29.9) {
+      resultadoText = "Seu IMC: " + imcArredondado + " Sobrepeso.";
     } else {
-      resultadoText += "Obesidade.";
+      resultadoText = "Seu IMC: " + imcArredondado + " Obesidade.";
     }
+    Text += "Obesidade.";
 
     document.getElementById("resultado").textContent = resultadoText;
     document.getElementById("resultado").style.border = "2px solid #54b3ab";

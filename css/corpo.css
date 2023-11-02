@@ -13,12 +13,10 @@ h1 {
   padding-top: 100px;
   justify-content: center;
 }
-
-.conteudo-bg {
+body {
   background-color: #6b4e7a;
-  max-width: auto;
-  height: 710px;
 }
+
 .conteudo-informacoes {
   background: #fff;
   height: 400px;
@@ -50,6 +48,7 @@ h1 {
   margin-bottom: 10px;
   border: none;
   background: #f4f4f4;
+  width: 200px;
 }
 .botao {
   grid-column: 2;
